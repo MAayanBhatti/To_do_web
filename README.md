@@ -18,7 +18,7 @@ A clean, responsive To Do List web app built with vanilla JavaScript and Tailwin
 - GitHub Pages (for deployment)
 
 ## 🔗 Live Demo
-👉 [View it here](https://YOUR_USERNAME.github.io/To_do_web/)
+👉 [View it here](https://maayanbhatti.github.io/To_do_web/)
 
 ---
 
