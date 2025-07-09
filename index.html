@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My To Do</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors">
+
+  <div class="flex h-screen">
+
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-white dark:bg-gray-800 shadow-md flex flex-col">
+      <div class="flex items-center justify-between p-4 border-b dark:border-gray-700">
+        <h2 class="text-xl font-bold text-primary">To Do</h2>
+        <button id="addListBtn" title="New List" class="text-primary text-2xl">＋</button>
+      </div>
+      <nav id="listContainer" class="flex-1 p-4 overflow-y-auto space-y-1">
+        <!-- Default + custom lists injected here -->
+      </nav>
+      <div class="p-4 border-t dark:border-gray-700">
+        <button id="toggleTheme" class="w-full bg-primary text-white py-2 rounded hover:bg-blue-700 transition">
+          Toggle Theme
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="flex-1 p-6 overflow-y-auto">
+      <h1 id="activeListTitle" class="text-2xl font-bold mb-4">My Day</h1>
+
+      <div class="flex items-center gap-2 mb-4">
+        <input id="taskInput" type="text" placeholder="Add a task"
+          class="flex-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary outline-none dark:bg-gray-800 dark:border-gray-600"/>
+        <input id="dueDate" type="date"
+          class="p-2 border border-gray-300 rounded-md dark:bg-gray-800 dark:border-gray-600"/>
+        <button id="addTaskBtn"
+          class="bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Add</button>
+      </div>
+
+      <input id="searchInput" type="text" placeholder="Search tasks..."
+        class="w-full mb-4 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary outline-none dark:bg-gray-800 dark:border-gray-600"/>
+
+      <ul id="taskList" class="space-y-2 max-h-[65vh] overflow-y-auto pr-2">
+        <!-- Tasks for active list -->
+      </ul>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
